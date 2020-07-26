@@ -1,0 +1,75 @@
+查找
+#include<stdio.h>
+int main(void)
+{
+	int i,n,shu=-1,num;
+	printf("输入n个元素的一维数组\n"); 
+	scanf("%d",&n);
+	int a[n];
+	for(i=0;i<n;i++)
+	scanf("%d",&a[i]);
+	printf("输入需要查找的数num\n");
+	scanf("%d",&num);
+	for(i=0;i<n;i++)
+	 {
+	 	if(a[i]==num)
+		 {
+		  shu=i;
+		  break;
+		 }
+	 }
+	 if(shu<0)
+	 printf("没有找到该元素\n");
+	 else
+	 printf("%d是这个数组中第%d个元素",num,shu+1);
+	return 0;
+}
+倒置
+#include<stdio.h>
+int main(void){
+int n,i,j,t;
+printf("输入n个数\n");
+scanf("%d",&n);
+int a[n];
+for(i=0;i<n;i++)
+scanf("%d",&a[i]);
+i=0;
+j=n-1;
+while(i<j)
+{
+	t=a[i];
+	a[i]=a[j];
+	a[j]=t;
+	i++;
+	j--;
+}
+for(i=0;i<n;i++)
+{
+	printf("%d\n",a[i]);
+}
+return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
